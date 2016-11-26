@@ -9,7 +9,7 @@ public class reflectInfo {
 
 	public static void main(String[] args) throws IllegalArgumentException, InvocationTargetException {
 		// TODO Auto-generated method stub
-		 try {
+		try {
 			Class<?> clazz = Class.forName("com.hal.entity.Student");
 			Object object = clazz.newInstance();
 			System.out.println(object.getClass().getName());
@@ -31,9 +31,9 @@ public class reflectInfo {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 
+
 	}
-   public void getClazz(){
-	    
-   }
+	public void getClazz(){
+
+	}
 }
