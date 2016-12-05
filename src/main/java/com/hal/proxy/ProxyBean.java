@@ -19,8 +19,12 @@ public class ProxyBean implements InvocationHandler {
 		System.out.println("==============start execute method:"+method.getName());
 		Object result  = method.invoke(targetObject, params);
 		long end = System.nanoTime();
-		System.out.println("============execute method "+method.getName()+" in "+(end-st)+" seconds");
+		System.out.println("============execute method "+method.getName()+" in "+(end-st)+" naoseconds");
 		return result;
 	}
-
+   @Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return  ProxyBean.class.getName()+"---"+ProxyBean.class.getConstructors().toString();
+}
 }

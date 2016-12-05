@@ -1,5 +1,5 @@
 package com.hal.proxy;
 
-public interface BaseProxy {
-       void sayHello();
+  interface BaseProxy {
+       public void sayHello();
 }
