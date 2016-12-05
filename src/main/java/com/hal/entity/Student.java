@@ -14,11 +14,11 @@ public class Student implements Serializable {
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
-    public	 Student(String name,int age,String depart){
-    	this.name= name;
-    	this.age = age;
-    	this.depart = depart;
-    }
+	public	 Student(String name,int age,String depart){
+		this.name= name;
+		this.age = age;
+		this.depart = depart;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -66,15 +66,15 @@ public class Student implements Serializable {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-  public String toString(){
-	return "name:"+this.name+
-			 "\n age:"+this.age+"\n depart:"+this.depart;
-  }
-  
-  public void writeSome(String name){
-	  System.out.println("name:"+name);
-  }
-  public void writeSome(String name,String depart){
-	  System.out.println("name:"+name+"\t depart:"+depart);
-  }
+	public String toString(){
+		return "name:"+this.name+
+				"\n age:"+this.age+"\n depart:"+this.depart;
+	}
+
+	public void writeSome(String name){
+		System.out.println("name:"+name);
+	}
+	public void writeSome(String name,String depart){
+		System.out.println("name:"+name+"\t depart:"+depart);
+	}
 }
