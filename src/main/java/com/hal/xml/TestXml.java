@@ -1,4 +1,4 @@
-package com.hal.xml;
+/*package com.hal.xml;
 
 
 import org.apache.log4j.Logger;
@@ -66,3 +66,4 @@ public class TestXml {
 	}
 
 }
+*/

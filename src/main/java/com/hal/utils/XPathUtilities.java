@@ -1,4 +1,4 @@
-package com.hal.utils;
+/*package com.hal.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ public class XPathUtilities {
 		return XmlUtilities.nodeToString(node);
 	}
 
-/*	public static Node getXmlNode(String xpathExpression, String xmlContent) {
+	public static Node getXmlNode(String xpathExpression, String xmlContent) {
 		try {
 			XPathFactory xPathfactory = new XPathFactoryImpl();
 			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
@@ -36,7 +36,7 @@ public class XPathUtilities {
 		} catch (XPathExpressionException e) {
 			throw new RuntimeException(e);
 		}
-	}*/
+	}
 
 	public static Node getXmlNode(String xpathExpression, Document document) {
 		try {
@@ -201,11 +201,11 @@ public class XPathUtilities {
 		}
 	}
 
-	/**
+	*//**
 	 * @param isWatchExp
 	 * @param product
 	 * @return
-	 */
+	 *//*
 	public static boolean isTrue(String isWatchExp, Node n) {
 		try {
 			XPathFactory xPathfactory = new XPathFactoryImpl();
@@ -219,3 +219,4 @@ public class XPathUtilities {
 		}
 	}
 }
+*/
