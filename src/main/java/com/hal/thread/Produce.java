@@ -8,7 +8,6 @@ public class Produce implements Runnable {
         	 this.storage =storage;
         	 num = n;
 		}
-		@Override
 		public void run() {
 			// TODO Auto-generated method stub
 			storage.produce(num);

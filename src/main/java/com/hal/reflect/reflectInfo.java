@@ -12,9 +12,14 @@ public class reflectInfo {
 		// TODO Auto-generated method stub
 		try {
 			Class<?> clazz = Class.forName("com.hal.entity.Student");
+			System.out.println(clazz.getSigners());
      	 Field[] fields = clazz.getDeclaredFields();
+     	 Field person=clazz.getDeclaredField("person");
+     	 System.out.println(person.isSynthetic());
+     	System.out.println(String.class.getSimpleName());
 			for (Field field : fields) {
 				System.out.println("field name:"+field.getName());
+				
 			}
 		/*	Method[] methods = clazz.getDeclaredMethods();
 			for (Method method : methods) {

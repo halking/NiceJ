@@ -12,7 +12,6 @@ public class MoneyTest {
 	
 	executor.execute(new Runnable() {
 		
-		@Override
 		public void run() {
 			// TODO Auto-generated method stub
 			int i = 5;
@@ -29,7 +28,6 @@ public class MoneyTest {
 	});
 	Future<?>  future = executor.submit(new Runnable() {
 		
-		@Override
 		public void run() {
 			// TODO Auto-generated method stub
 			int i = 5;

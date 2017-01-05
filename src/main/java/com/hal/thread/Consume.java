@@ -10,7 +10,6 @@ public class Consume implements Runnable {
 		num = n;
 	}
 
-	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		storage.consume(num);

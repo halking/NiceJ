@@ -1,4 +1,4 @@
-/*package com.hal.utils;
+package com.hal.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -26,8 +26,8 @@ public class XPathUtilities {
 
 	public static Node getXmlNode(String xpathExpression, String xmlContent) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();
+			XPathFactory xPathfactory = XPathFactory.newInstance(); 
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression expr = xpath.compile(xpathExpression);
@@ -40,8 +40,8 @@ public class XPathUtilities {
 
 	public static Node getXmlNode(String xpathExpression, Document document) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance();
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression expr = xpath.compile(xpathExpression);
@@ -58,8 +58,8 @@ public class XPathUtilities {
 
 	public static String getXmlString(String xpathExpression, Document document) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression expr = xpath.compile(xpathExpression);
@@ -71,8 +71,8 @@ public class XPathUtilities {
 
 	public static String getXmlContent(String xpathExpression, Document document) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression expr = xpath.compile(xpathExpression);
@@ -91,8 +91,8 @@ public class XPathUtilities {
 
 	public static NodeList getNodeList(Document doc, String expr) {
 		try {
-//			XPathFactory xPathfactory = new XPathFactoryImpl();
-			XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression pathExpr = xpath.compile(expr);
@@ -105,8 +105,8 @@ public class XPathUtilities {
 
 	public static Node getNode(Document doc, String expr) {
 		try {
-//			XPathFactory xPathfactory = new XPathFactoryImpl();
-			XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression pathExpr = xpath.compile(expr);
@@ -119,8 +119,8 @@ public class XPathUtilities {
 
 	public static NodeList getNodeList(Node rootNode, String expr) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression pathExpr = xpath.compile(expr);
@@ -135,8 +135,8 @@ public class XPathUtilities {
 	// extracts the String value for the given expression
 	public static String getValue(Node n, String expr) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression pathExpr = xpath.compile(expr);
@@ -148,8 +148,8 @@ public class XPathUtilities {
 
 	public static Node getNode(InputStream in, String xpathExpression)
 			throws Exception {
-		XPathFactory xPathfactory = new XPathFactoryImpl();
-		//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//		XPathFactory xPathfactory = new XPathFactoryImpl();s
+		XPathFactory xPathfactory = XPathFactory.newInstance();
 		XPath xpath = xPathfactory.newXPath();
 		xpath.setNamespaceContext(new EsiNamespaceContext());
 		InputSource inputSource = new InputSource(in);
@@ -160,8 +160,8 @@ public class XPathUtilities {
 	public static Node getNode(String content, String xpathExpression)
 			throws Exception {
 
-		XPathFactory xPathfactory = new XPathFactoryImpl();
-		//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//		XPathFactory xPathfactory = new XPathFactoryImpl();s
+		XPathFactory xPathfactory = XPathFactory.newInstance();
 		XPath xpath = xPathfactory.newXPath();
 		xpath.setNamespaceContext(new EsiNamespaceContext());
 		InputSource inputSource = new InputSource(new StringReader(content));
@@ -201,15 +201,15 @@ public class XPathUtilities {
 		}
 	}
 
-	*//**
+	/**
 	 * @param isWatchExp
 	 * @param product
 	 * @return
-	 *//*
+	 */
 	public static boolean isTrue(String isWatchExp, Node n) {
 		try {
-			XPathFactory xPathfactory = new XPathFactoryImpl();
-			//XPathFactory xPathfactory = XPathFactory.newInstance(); 
+//			XPathFactory xPathfactory = new XPathFactoryImpl();s
+			XPathFactory xPathfactory = XPathFactory.newInstance();
 			XPath xpath = xPathfactory.newXPath();
 			xpath.setNamespaceContext(new EsiNamespaceContext());
 			XPathExpression pathExpr = xpath.compile(isWatchExp);
@@ -219,4 +219,3 @@ public class XPathUtilities {
 		}
 	}
 }
-*/
