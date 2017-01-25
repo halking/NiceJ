@@ -248,7 +248,7 @@ public class Chat
 
     /** Prints the usage. */
     private static void printUsage() {
-
+    	
         StringBuffer use = new StringBuffer();
         use.append("usage: java Chat (options) ...\n\n");
         use.append("options:\n");

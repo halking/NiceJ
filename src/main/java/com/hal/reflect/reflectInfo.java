@@ -13,24 +13,25 @@ public class reflectInfo {
 		try {
 			Class<?> clazz = Class.forName("com.hal.entity.Student");
 			System.out.println(clazz.getSigners());
-     	 Field[] fields = clazz.getDeclaredFields();
-     	 Field person=clazz.getDeclaredField("person");
-     	 System.out.println(person.isSynthetic());
-     	System.out.println(String.class.getSimpleName());
+			Field[] fields = clazz.getDeclaredFields();
+			Field person = clazz.getDeclaredField("person");
+			System.out.println(person.isSynthetic());
+			System.out.println(String.class.getSimpleName());
 			for (Field field : fields) {
-				System.out.println("field name:"+field.getName());
-				
+				System.out.println("field name:" + field.getName());
+
 			}
-		/*	Method[] methods = clazz.getDeclaredMethods();
-			for (Method method : methods) {
-				System.out.println("method name:"+method.getName());
-			}*/
+			/*
+			 * Method[] methods = clazz.getDeclaredMethods(); for (Method method
+			 * : methods) { System.out.println("method name:"+method.getName());
+			 * }
+			 */
 
 			Object object = clazz.newInstance();
 			System.out.println(object.getClass().getName());
-			Method method = clazz.getDeclaredMethod("writeSome",String.class);
-		    Class<?>[] paramsType = method.getParameterTypes();
-			method.invoke(object,"steven");
+			Method method = clazz.getDeclaredMethod("writeSome", String.class);
+			Class<?>[] paramsType = method.getParameterTypes();
+			method.invoke(object, "steven");
 		} catch (ClassNotFoundException ec) {
 			// TODO Auto-generated catch block
 			ec.printStackTrace();
@@ -40,7 +41,8 @@ public class reflectInfo {
 		}
 
 	}
-	public void getClazz(){
+
+	public void getClazz() {
 
 	}
 }

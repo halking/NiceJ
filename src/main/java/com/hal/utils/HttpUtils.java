@@ -46,7 +46,6 @@ public final class HttpUtils {
     public static String securePost(URL url, String userName, String userPassword, String userAgent, String contentType, String content) throws IOException {
 
         // Check the URL
-        
         if(url == null) {
             
             throw new IOException("The server url cannot be null");
