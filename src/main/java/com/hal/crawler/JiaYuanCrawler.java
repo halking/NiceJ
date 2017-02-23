@@ -21,7 +21,7 @@ import edu.uci.ics.crawler4j.url.WebURL;
 
 public class JiaYuanCrawler extends WebCrawler {
     /** 爬取数据保存文件路径 */
-    private final static String CSV_PATH = "D:\\test\\jiayuan.csv";
+    private final static String CSV_PATH = "E:\\test\\jiayuan.csv";
     /** 爬取匹配原则 */
     private final static Pattern FILTERS = Pattern.compile(".*(\\.(css|js|bmp|gif|jpe?g|ico"
             + "|png|tiff?|mid|mp2|mp3|mp4" + "|wav|avi|mov|mpeg|ram|m4v|pdf" + "|rm|smil|wmv|swf|wma|zip|rar|gz))$");
@@ -126,7 +126,7 @@ public class JiaYuanCrawler extends WebCrawler {
 				httpUrl = (HttpURLConnection) url.openConnection();
 				httpUrl.connect();
 				bis = new BufferedInputStream(httpUrl.getInputStream());
-				fos = new FileOutputStream("D:\\test\\img\\" + name + destUrl.substring(destUrl.lastIndexOf(".")));
+				fos = new FileOutputStream("E:\\test\\img\\" + name + destUrl.substring(destUrl.lastIndexOf(".")));
 				while ((size = bis.read(buf)) != -1) {
 					fos.write(buf, 0, size);
 				}
