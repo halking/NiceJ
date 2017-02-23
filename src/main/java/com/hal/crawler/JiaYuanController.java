@@ -13,7 +13,7 @@ public class JiaYuanController {
 
     public static void main(String[] args) {
         System.out.println("-------begin:" + new Timestamp(System.currentTimeMillis()));
-        final String crawlStorageFolder = "D:\\test";
+        final String crawlStorageFolder = "E:\\test";
         final int numberOfCrawlers =20;
 
         final CrawlConfig config = new CrawlConfig();
