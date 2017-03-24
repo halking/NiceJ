@@ -49,7 +49,7 @@ public class HelloWorld_Service extends Service {
 	 */
 	@WebEndpoint(name = "HelloWorldImplPort")
 	public HelloWorld getHelloWorldImplPort() {
-		return super.getPort(new QName("http://client.jws.hal.com/", "HelloWorldImplPort"), HelloWorld.class);
+		return super.getPort(new QName("http://jws.hal.com/", "HelloWorldImplPort"), HelloWorld.class);
 	}
 
 	/**

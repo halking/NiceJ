@@ -24,8 +24,8 @@ public interface HelloWorld {
 	 */
 	@WebMethod
 	@WebResult(targetNamespace = "")
-	@RequestWrapper(localName = "sayHello", targetNamespace = "http://client.jws.hal.com/", className = "com.hal.jws.client.SayHello")
-	@ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://client.jws.hal.com/", className = "com.hal.jws.client.SayHelloResponse")
+	@RequestWrapper(localName = "sayHello", targetNamespace = "http://jws.hal.com/", className = "com.hal.jws.SayHello")
+	@ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://jws.hal.com/", className = "com.hal.jws.SayHelloResponse")
 	public String sayHello(@WebParam(name = "params", targetNamespace = "") String params);
 
 	/**
