@@ -53,6 +53,26 @@
 					},
 					"name": "xml",
 					"visibility": "public"
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAFbKMotZ2DBiO4=",
+					"_parent": {
+						"$ref": "AAAAAAFZTkXyw0lXdww="
+					},
+					"name": "Thread",
+					"ownedElements": [
+						{
+							"_type": "UMLProfile",
+							"_id": "AAAAAAFbKMrg72DGpaM=",
+							"_parent": {
+								"$ref": "AAAAAAFbKMotZ2DBiO4="
+							},
+							"name": "Lock",
+							"visibility": "public"
+						}
+					],
+					"visibility": "public"
 				}
 			],
 			"visibility": "public"
@@ -20674,9 +20694,9 @@
 																	"showShadow": true,
 																	"containerChangeable": false,
 																	"containerExtending": false,
-																	"left": 166.97900390625,
+																	"left": 166,
 																	"top": 29,
-																	"width": 115.9052734375,
+																	"width": 107,
 																	"height": 13,
 																	"autoResize": false,
 																	"underline": false,
@@ -20702,7 +20722,7 @@
 																	"containerExtending": false,
 																	"left": 101,
 																	"top": 29,
-																	"width": 60.97900390625,
+																	"width": 60,
 																	"height": 13,
 																	"autoResize": false,
 																	"underline": false,
@@ -23059,6 +23079,7 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
+											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
@@ -23076,6 +23097,7 @@
 											"visibility": "public",
 											"isStatic": false,
 											"isLeaf": false,
+											"type": "",
 											"isReadOnly": false,
 											"isOrdered": false,
 											"isUnique": false,
