@@ -4,8 +4,12 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class MyLock {
+import org.slf4j.Logger;
 
+import com.hal.utils.LogUtil;
+
+public class MyLock {
+	public static final Logger logger = LogUtil.initLog(MyLock.class);
 	private final Lock lock = new ReentrantLock();
 	private final Condition full = lock.newCondition();
 	private final Condition empty = lock.newCondition();
@@ -22,6 +26,8 @@ public class MyLock {
 			while (count == 0)
 				empty.await();
 			object = items[take];
+			if (logger.isDebugEnabled()) 
+				logger.info("take a item----"+object);
 			if (++take == items.length)
 				take = 0;
 			--count;
@@ -41,6 +47,8 @@ public class MyLock {
 			while (count == items.length)
 				full.await();
 			items[put] = object;
+			if (logger.isDebugEnabled()) 
+				logger.info("put a item-----"+items[put]);
 			if (++put == items.length)
 				put = 0;
 			++count;
