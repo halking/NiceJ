@@ -23,18 +23,18 @@ import org.slf4j.LoggerFactory;
 import com.thoughtworks.xstream.mapper.Mapper.Null;
 
 public class JmsChat implements MessageListener {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(JmsChat.class);
 	public static final String TOPIC = "HUANG";
 	public static final String USERNAME = "HUANG";
 	public static final String FACTORY = "tcp://localhost:61616";
 	private TopicConnection connection;
-	private TopicSession pubSession = null;
+	private TopicSession pubSession;
 	private TopicPublisher publisher;
 	private String username;
 
 	public JmsChat(String factory, String topicName, String username) {
-		
+
 		InitialContext ctx = null;
 		try {
 			ctx = new InitialContext();
@@ -42,7 +42,7 @@ public class JmsChat implements MessageListener {
 			TopicConnection connection = connectionFactory.createTopicConnection();
 			TopicSession pubsession = connection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
 			TopicSession subsession = connection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
-			
+
 			Topic topic = (Topic) ctx.lookup(topicName);
 			TopicPublisher publisher = pubSession.createPublisher(topic);
 			TopicSubscriber subscriber = subsession.createSubscriber(topic);
@@ -52,7 +52,7 @@ public class JmsChat implements MessageListener {
 			this.pubSession = pubsession;
 			this.publisher = publisher;
 			this.username = username;
-			
+
 			connection.start();
 		} catch (NamingException e) {
 			// TODO: handle exception
@@ -65,7 +65,7 @@ public class JmsChat implements MessageListener {
 		// TODO Auto-generated method stub
 		try {
 			TextMessage ame = (TextMessage) message;
-			System.out.println("msg text:"+ame.getText());
+			System.out.println("msg text:" + ame.getText());
 		} catch (JMSException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -88,18 +88,24 @@ public class JmsChat implements MessageListener {
 	}
 
 	public static void main(String[] args) throws Exception {
-	/*	if (args.length!=3) {
-			System.out.println("input paramter is mismatch!");
-		}*/
-	JmsChat chat  = new JmsChat(FACTORY, TOPIC, USERNAME);
-	BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-	while(true){
-		String s = reader.readLine();
-		if (s.equalsIgnoreCase("exist")) {
-			chat.close();
-		}else {
-			chat.sendMessage(s);
+		/*
+		 * if (args.length!=3) {
+		 * System.out.println("input paramter is mismatch!"); }
+		 */
+		JmsChat chat = new JmsChat(FACTORY, TOPIC, USERNAME);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		while (true) {
+			try {
+				String s = reader.readLine();
+				if (s.equalsIgnoreCase("exist")) {
+					chat.close();
+				} else {
+					chat.sendMessage(s);
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
 		}
-	}
 	}
 }

@@ -9,7 +9,7 @@ public class IocTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:bean.xml");
 		StackLinked stack = (StackLinked)context.getBean("stack");
 		stack.push("first");
 		String element = (String)stack.pop();
