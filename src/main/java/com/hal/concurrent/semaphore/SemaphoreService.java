@@ -31,7 +31,6 @@ public class SemaphoreService implements ThreadService {
 			// TODO: handle exception
 		}
 	}
-
 	public void serialProcess() {
 		try {
 			semaphore.acquire();
@@ -82,7 +81,7 @@ public class SemaphoreService implements ThreadService {
 		}
 	}
 	
-	public void produceItem() {
+	public  void produceItem() {
 		try {
 			producer.acquire();
 			lock.lock();
