@@ -1,22 +1,18 @@
 package com.hal.thread;
 
-public class MyThread implements Runnable {
-	
-	private String name;
-	public MyThread(String name) {
-		// TODO Auto-generated constructor stub
-		this.name = name;
+public class MyThread extends Thread {
+	private String some;
+	public MyThread(String some) {
+		this.some = some;
 	}
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		System.out.println("inner thread is running!");
+		System.out.println(Thread.currentThread().getName()+" is running!"+"--"+getSome());
 	}
-	public String getName() {
-		return name;
+	public String getSome() {
+		return some;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setSome(String some) {
+		this.some = some;
 	}
-	
 }

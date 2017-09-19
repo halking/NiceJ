@@ -25,12 +25,14 @@ public class ThreadPoolMain {
 		}
 	};
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		// cacheTest();
 //		LinkedDequeTestA();
 //		SynchronousQueueTestA();
-		CallableTest();
+//		CallableTest();
+		CallableService<String> service = new CallableService<String>(100);
+		String t = service.call();
 	}
 
 	public static void cacheTest() {
@@ -112,6 +114,14 @@ public class ThreadPoolMain {
 			Future<T> future = executor.submit(service);
 			System.out.println(future.get());
 		} catch (ExecutionException e) {
+			// TODO: handle exception
+		}
+	}
+	public static <T> void CallableTest1() throws InterruptedException {
+		try {
+			CallableService<T> service = new CallableService<T>(100);
+			T t = service.call();
+		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}

@@ -9,7 +9,7 @@ import java.util.Random;
 
 import com.hal.entity.Person.Sex;
 
-public class Student<T> implements Serializable {
+public class Student implements Serializable {
 	private Integer id;
 	private String name;
 	private int age;
@@ -17,14 +17,7 @@ public class Student<T> implements Serializable {
 	private Date birthday;
 	private String gender;
 	private  Person person;
-	private List<T> list;
 	
-	public List<T> getList() {
-		return list;
-	}
-	public void setList(List<T> list) {
-		this.list = list;
-	}
 	public Person getPerson() {
 		return person;
 	}

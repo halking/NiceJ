@@ -18,11 +18,10 @@ public class ThreadMain {
 	 *@author D1M
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Thread thread = new Thread(new MyThread("mythread"),"mythread");
+//		Thread thread = new Thread(new MyThread("mythread"),"mythread");
+		MyThread thread = new MyThread("mythread");
 		thread.start();
-		System.out.println(thread.getName());
-		System.out.println("main thread is running!" +Thread.currentThread().getName());
+		System.out.println(Thread.currentThread().getName()+" thread is running!" );
 	}
 	
 }
