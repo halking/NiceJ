@@ -1,4 +1,4 @@
-package com.mayi.pos.common.util.security;
+package com.hal.utils;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;
