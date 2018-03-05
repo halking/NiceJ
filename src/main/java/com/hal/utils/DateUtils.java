@@ -32,6 +32,15 @@ public final class DateUtils {
     
     private static String DATE_FORMAT_ERR_MESS = "Date format error."; 
     
+    public static void main(String[] args) {
+        long timeInMillis = Calendar.getInstance().getTimeInMillis();
+        System.out.println(timeInMillis);  
+        TimeZone timeZone = TimeZone.getTimeZone("ASIA/shanghai");
+        System.out.println(timeZone.toString());
+        Calendar calendar = Calendar.getInstance(timeZone);
+        calendar.setTimeInMillis(timeInMillis + timeZone.getOffset(timeInMillis));
+        System.out.println(calendar.getTime());
+	}
     public static Date getDate(String timezone) {
         Calendar calendar = getCalendar(timezone);
         

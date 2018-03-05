@@ -34,3 +34,4 @@ target/
 .svn
 .vagrant
 *.orig
+/pom.xml
