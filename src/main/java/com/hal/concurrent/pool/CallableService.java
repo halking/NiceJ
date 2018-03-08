@@ -10,7 +10,11 @@ public class CallableService<T> implements Callable<T> {
 	}
 	@Override
 	public T call() throws Exception {
-		System.out.println(Thread.currentThread().getName()+" is running!");
+		if (age ==1) {
+//			throw new  Exception(Thread.currentThread().getName()+"线程中断");
+		}
+//		Thread.sleep(1000);
+		System.out.println(Thread.currentThread().getName()+" is running>>>>"+age);
 		return  (T) ("返回值是："+age);
 	}
 }

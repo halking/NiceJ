@@ -9,7 +9,6 @@ import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-import org.apache.tomcat.jni.File;
 
 public class EngineMain {
 

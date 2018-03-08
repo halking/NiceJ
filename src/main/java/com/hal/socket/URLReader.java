@@ -20,7 +20,7 @@ public class URLReader {
 	public static void main(String[] args)  throws Exception{
        URL   url =  new URL("http://www.nowcoder.com/523171");
        BufferedReader  br = new BufferedReader(new InputStreamReader(url.openStream()));
-       String path="d://tmp/out.txt";
+       String path="e://tmp/out.txt";
        OutputStreamWriter   osw = new OutputStreamWriter(new FileOutputStream(path));
        String line;
        while((line=br.readLine())!=null){

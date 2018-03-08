@@ -19,7 +19,7 @@ public class ServerDemo {
       try {
 		ServerSocket  server = null;
 		try {
-			server = new ServerSocket(600);
+			server = new ServerSocket(8080);
 			 
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -42,7 +42,6 @@ public class ServerDemo {
 		socket.close();
 		server.close();
 	} catch (Exception e) {
-		// TODO: handle exception
 		System.out.println("Server Error:"+e);
 	}
 	}

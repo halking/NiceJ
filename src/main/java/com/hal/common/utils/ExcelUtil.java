@@ -26,7 +26,7 @@ public class ExcelUtil {
     public final static String PATH = "D:\\tmp\\demo.xlsx";
 
     public static void main(String[] args) throws Exception {
-
+    	parseExcel("E:/IT1/Journey/history-bind-list/list_0122.xlsx");
         
     }
     public static void buildExcel(Class clazz,List<List<String>> values,String path){
@@ -57,7 +57,7 @@ public class ExcelUtil {
     	OPCPackage pkg = null;
     	  Workbook wb = null;
     	try {
-    		 pkg = OPCPackage.open(new File("D:\\tmp\\user.xlsx"));
+    		 pkg = OPCPackage.open(new File(path));
              wb = new XSSFWorkbook(pkg);
 		} catch (InvalidFormatException ife) {
 			// TODO: handle exception
@@ -109,13 +109,16 @@ public class ExcelUtil {
             }
         }
         StringBuffer buffer = new StringBuffer();
-        buffer.append("insert into user(");
+/*        buffer.append("insert into user(");
         for (String hd : head) {
             buffer.append(hd + ",");
         }
         buffer.append(")value(");
         for (Object o : value) {
             buffer.append("'" + o + "',");
+        }*/
+        for (Object o : value) {
+            buffer.append(o+"\n");
         }
         System.out.print(buffer.toString());
     }
@@ -162,4 +165,5 @@ public class ExcelUtil {
         style.setTopBorderColor(IndexedColors.BLACK.getIndex());
         return style;
     }
+    
 }

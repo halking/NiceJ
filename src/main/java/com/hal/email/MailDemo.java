@@ -20,14 +20,15 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 
 public class MailDemo {
 	public final static String MAIL = "@sina.com"; // 邮箱格式
-	public final static String SEND_HOST = "smtp.sina.com"; // 邮箱发送服务器
-	public final static String ACCEPT_HOST = "pop.sina.com"; // 邮箱服务器
-	public final static String SEND_USER = "hal381763563"; // 用户名
-	public final static String SEND_PWD = "hal09123316"; // 密码
-	public final static String FROM_MAIL = SEND_USER + "@sina.com";// 发送方邮箱地址
-	public final static String TO_MAIL = "hal381763563@sina.com"; // 接收方邮箱地址
-	public final static String CC_MAIL = SEND_USER + MAIL; // 抄送方邮箱地址
-	public final static String BCC_MAIl = SEND_USER + MAIL; // 密送方邮箱地址
+	public final static String SEND_HOST = "smtp.exmail.qq.com"; // 邮箱发送服务器
+	public final static String ACCEPT_HOST = "imap.exmail.qq.com"; // 邮箱服务器
+	public final static String SEND_USER = "steven.huang@d1m.cn"; // 用户名
+	public final static String SEND_PWD = "Hal3316..-+"; // 密码
+	public final static String FROM_MAIL = SEND_USER ;// 发送方邮箱地址
+	public final static String TO_MAIL = "steven.huang@richemont.com"; // 接收方邮箱地址
+	public final static String TO_SINA_MAIL = "hal381763563@sina.com"; // 接收方邮箱地址
+	public final static String CC_MAIL = SEND_USER ; // 抄送方邮箱地址
+	public final static String BCC_MAIl = SEND_USER ; // 密送方邮箱地址
 
 	public final static String ENCODE = "UTF-8";
 	public static Date date = new Date();
@@ -179,8 +180,8 @@ public class MailDemo {
 		Properties prop = new Properties();
 		prop.setProperty("mail.transport.protocol", "smtp"); // 设置邮件发送协议
 		prop.setProperty("mail.host", SEND_HOST); // 邮件服务器地址
-		prop.setProperty("mail.smtps.ssl.enable", "true"); // 邮件ssl验证
-		prop.setProperty("mail.smtp.auth", "true"); // 邮件服务身份验证
+		prop.setProperty("mail.smtps.ssl.enable", "false"); // 邮件ssl验证
+		prop.setProperty("mail.smtp.auth", "false"); // 邮件服务身份验证
 
 		send.setUsername(SEND_USER); // 设置用户名
 		send.setPassword(SEND_PWD); // 设置密码
@@ -198,7 +199,7 @@ public class MailDemo {
 		helper.setSubject("发送带有附件的邮件");
 		String html = "<font size='5' color='red'>附件测试成功！</font>";
 		helper.setText(html, true); // 邮件内容，参数true表示是html代码
-		String demo = "demo.docx";
+		String demo = "default_excel.xlsx";
 		ClassPathResource resource = new ClassPathResource(demo); // 加载项目路径下资源
 		helper.addAttachment(MimeUtility.encodeWord(demo), resource); // 如果文件是中文名，需要转码。
 		send.send(msg); // 发送邮件
@@ -209,7 +210,7 @@ public class MailDemo {
 		// TODO Auto-generated method stub
 		// MailDemo.send();
 		// MailDemo.receive();
-		// sendTxtMail();
+//		 sendTxtMail();
 		// sendHtmlMail();
 		// sendInlineMail();
 		sendAttachmentMail();

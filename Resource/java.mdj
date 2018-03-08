@@ -23895,6 +23895,27 @@
 						}
 					],
 					"visibility": "public"
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAFfCV+RccDi3/Q=",
+					"_parent": {
+						"$ref": "AAAAAAFZTkXyw0lXdww="
+					},
+					"name": "NIO",
+					"ownedElements": [
+						{
+							"_type": "UMLClassDiagram",
+							"_id": "AAAAAAFfCV/FGMDmzlA=",
+							"_parent": {
+								"$ref": "AAAAAAFfCV+RccDi3/Q="
+							},
+							"name": "ClassDiagram1",
+							"visible": true,
+							"defaultDiagram": false
+						}
+					],
+					"visibility": "public"
 				}
 			],
 			"visibility": "public"

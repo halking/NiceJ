@@ -59,7 +59,7 @@ public class CheckDataExport {
 
         String root ="E:/Richemont-RWF/data_expoted/DATA EXPORT/";
 //    	String root ="E:/Richemont-RWF/data_expoted/20170707/Data Export0707/";
-        String[] fileName={ "wechat_reporting_menu_version"};
+        String[] fileName={ "user"};
 //        String[] fileName={"wechat_reporting_menu_click","wechat_reporting_user_cumulate","wechat_reporting_user_summary","wechat_reporting_article_summary",
 //        "wechat_reporting_article_total","user","wechat_reporting_upstream_message_keyword","wechat_reporting_menu_version"};
         for(int i=0;i<fileName.length;i++){
@@ -116,16 +116,16 @@ public class CheckDataExport {
                     //if (inString.indexOf("Shanghaitan")>-1) {
                     	 if(!"".equalsIgnoreCase(dateLong)){
                              
-//                             if(sdf.format(date).contains("2017-04-07")){   
+                             if(sdf.format(date).contains("2017-07-05")){   
                                  writer.write(inString + "refDateStr:" + sdf.format(date));
                                  writer.newLine();
-//                            }
+                            }
                          }else if(!"".equalsIgnoreCase(createTimeLong)){
             
-//                            if(sdf.format(date).contains("2017-04-07")){   
+                            if(sdf.format(date).contains("2017-07-05")){   
                                  writer.write(inString + "createTimeStr:" + sdf.format(date));
                                  writer.newLine();
-//                            }
+                            }
                          }
                     //}
                    
